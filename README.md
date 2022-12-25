@@ -3,9 +3,9 @@
 <p align="center"><u>Um contador regressivo e customizável, com direito até a um som de fundo agradável e relaxante!</u></p>
 
 <p align="center">
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#computer-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#closed_book-modelo">Modelo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#licença">Licença</a>
 </p>
 
@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-    <img src="" alt="">
+    <img src="https://github.com/Pedro-Jelev/Contador-Divertido/blob/main/.github/Contador-Divertido.png" alt="Imagem Contador Divertido">
 </p>
 
 <br>
