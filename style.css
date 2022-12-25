@@ -1,0 +1,161 @@
+:root {
+    font-size: 62.5%;
+
+    --timer-color: #323238;
+
+    --play-color: #37ad2c;
+    --stop-color: #c21aa3;
+    --increase: #db4c0a;
+    --decrease: #3838be;
+
+    --bg-forest: green;
+    --bg-rain: blue;
+    --bg-coffee: purple;
+    --bg-fireplace: red;
+
+    --ico-forest: black;
+    --ico-rain: white;
+    --ico-coffee: gray;
+    --ico-fireplace: yellow;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+body {
+    font-size: 1.6rem;
+    min-height: 100vh;
+
+    display: flex;
+    gap: 19.2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#play svg path {
+    fill: var(--play-color);
+}
+
+#stop svg path {
+    fill: var(--stop-color);
+}
+
+#increase  svg path {
+    fill: var(--increase);
+}
+
+#decrease svg path {
+    fill: var(--decrease);
+}
+
+#forest svg path {
+    fill: var(--bg-forest);
+}
+
+#forest svg path+path {
+    fill: var(--ico-forest);
+}
+
+#rain svg path {
+    fill: var(--bg-rain);
+}
+
+#rain svg path+path {
+    fill: var(--ico-rain);
+}
+
+#coffee svg path {
+    fill: var(--bg-coffee);
+}
+
+#coffee svg path+path {
+    fill: var(--ico-coffee);
+}
+
+#fireplace svg path {
+    fill: var(--bg-fireplace);
+}
+
+#fireplace svg path+path {
+    fill: var(--ico-fireplace);
+}
+
+main {
+    text-align: center;
+}
+
+main .timer {
+    margin-bottom: 4.8rem;
+}
+
+main .timer span {
+    font-family: 'Roboto';
+    color: var(--timer-color);
+    font-size: 12.6166rem;
+    line-height: 14.8rem;
+}
+
+main .controls {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+}
+
+footer .theme {
+    display: grid;
+    grid-template-columns: [A] 1fr [B] 1fr;
+    grid-template-rows: [C] 1fr [D] 1fr;
+    gap: 3.2rem;
+}
+
+footer #forest {
+    grid-column: A;
+    grid-row: C;
+}
+
+footer #rain {
+    grid-column: B;
+    grid-row: C;
+}
+
+footer #coffee {
+    grid-column: A;
+    grid-row: D;
+}
+
+footer #fireplace {
+    grid-column: B;
+    grid-row: D;
+}
+
+#play:hover,
+#stop:hover,
+#increase:hover,
+#decrease:hover,
+#forest:hover,
+#rain:hover,
+#coffee:hover,
+#fireplace:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+@media screen and (max-width: 850px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 9.6rem;
+    }
+
+    footer .theme {
+        gap: 6.4rem;
+    }
+}
