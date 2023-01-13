@@ -33,9 +33,17 @@ export function Sound() {
     }
 
     function selectBackAudio(n) {
-        playlist[audio].pause()
+        backAudioPause()
         audio = n
-        playlist[audio].play()
+        backAudioPlay()
+    }
+
+    function On() {
+        playlist[audio].volume = 1
+    }
+
+    function Off() {
+        playlist[audio].volume = 0
     }
 
     return {
@@ -43,6 +51,8 @@ export function Sound() {
         endTime,
         backAudioPlay,
         backAudioPause,
-        selectBackAudio
+        selectBackAudio,
+        On,
+        Off
     }
 }

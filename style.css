@@ -17,6 +17,7 @@
     --ico-rain: white;
     --ico-coffee: gray;
     --ico-fireplace: yellow;
+    --color: #ed11b684;
 }
 
 * {
@@ -114,6 +115,14 @@ main .controls {
     justify-content: center;
 }
 
+.adjust button {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    background-color: var(--timer-color);
+    border-radius: 10px;
+}
+
 footer .theme {
     display: grid;
     grid-template-columns: [A] 1fr [B] 1fr;
@@ -146,6 +155,11 @@ footer #fireplace {
     position: absolute;
     bottom: 0;
     right: 3.2rem;
+}
+
+#soundOn path,
+#soundOff path {
+    fill: var(--timer-color);
 }
 
 button:hover {

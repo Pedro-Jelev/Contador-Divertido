@@ -1,15 +1,22 @@
 export function Element() {
+    const minuteScreen = document.querySelector('#minute')
+    const secondScreen = document.querySelector('#second')
+
     const buttonPlay = document.querySelector('#play')
     const buttonStop = document.querySelector('#stop')
     const buttonIncrease = document.querySelector('#increase ')
     const buttonDecrease = document.querySelector('#decrease ')
+
     const buttonForest = document.querySelector('#forest')
     const buttonRain = document.querySelector('#rain')
     const buttonCoffee = document.querySelector('#coffee')
     const buttonFireplace = document.querySelector('#fireplace')
 
-    const minuteScreen = document.querySelector('#minute')
-    const secondScreen = document.querySelector('#second')
+    const buttonSoundOn = document.querySelector('#soundOn')
+    const buttonSoundOff = document.querySelector('#soundOff')
+
+    // const value = getComputedStyle(document.documentElement).getPropertyValue('--bg-coffee')
+
 
     function getButtonPlay() {
         return buttonPlay
@@ -51,6 +58,14 @@ export function Element() {
         return secondScreen
     }
 
+    function getButtonSoundOn() {
+        return buttonSoundOn
+    }
+
+    function getButtonSoundOff() {
+        return buttonSoundOff
+    }
+
     return {
         getButtonPlay,
         getButtonStop,
@@ -61,6 +76,8 @@ export function Element() {
         getButtonCoffee,
         getButtonFireplace,
         getMinuteScreen,
-        getSecondScreen
+        getSecondScreen,
+        getButtonSoundOn,
+        getButtonSoundOff
     }
 }
