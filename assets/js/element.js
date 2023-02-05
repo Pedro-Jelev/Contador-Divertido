@@ -15,9 +15,6 @@ export function Element() {
     const buttonSoundOn = document.querySelector('#soundOn')
     const buttonSoundOff = document.querySelector('#soundOff')
 
-    // const value = getComputedStyle(document.documentElement).getPropertyValue('--bg-coffee')
-
-
     function getButtonPlay() {
         return buttonPlay
     }

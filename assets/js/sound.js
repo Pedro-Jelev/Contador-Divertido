@@ -38,12 +38,14 @@ export function Sound() {
         backAudioPlay()
     }
 
-    function On() {
-        playlist[audio].volume = 1
-    }
+    function isMuted(mute) {
+        if (mute === undefined) { return }
 
-    function Off() {
-        playlist[audio].volume = 0
+        playlist.forEach(audio => {
+            audio.muted = mute
+        })
+
+        btnClikcsAudio.muted = mute
     }
 
     return {
@@ -52,7 +54,6 @@ export function Sound() {
         backAudioPlay,
         backAudioPause,
         selectBackAudio,
-        On,
-        Off
+        isMuted
     }
 }

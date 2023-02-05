@@ -3,16 +3,12 @@ export function Button({ element, sound, timer, display }) {
     element.getButtonPlay().addEventListener('click', () => {
         timer.countDown()
         element.getButtonPlay().setAttribute('disabled', '')
-        sound.backAudioPlay()
-        disableMute()
         sound.clickButton()
     })
 
     element.getButtonStop().addEventListener('click', () => {
         timer.stopCount()
         element.getButtonPlay().removeAttribute('disabled', '')
-        sound.backAudioPause()
-        enableMute()
         sound.clickButton()
     })
 
@@ -28,51 +24,51 @@ export function Button({ element, sound, timer, display }) {
     })
 
     element.getButtonForest().addEventListener('click', () => {
+        sound.isMuted()
         sound.selectBackAudio(0)
-        disableMute()
+        sound.backAudioPlay()
     })
 
     element.getButtonRain().addEventListener('click', () => {
+        sound.isMuted()
         sound.selectBackAudio(1)
-        disableMute()
+        sound.backAudioPlay()
     })
 
     element.getButtonCoffee().addEventListener('click', () => {
+        sound.isMuted()
         sound.selectBackAudio(2)
-        disableMute()
+        sound.backAudioPlay()
     })
 
     element.getButtonFireplace().addEventListener('click', () => {
+        sound.isMuted()
         sound.selectBackAudio(3)
-        disableMute()
+        sound.backAudioPlay()
     })
 
     element.getButtonSoundOn().addEventListener('click', () => {
-        sound.Off()
-        toggleButtonMute()
-        sound.clickButton()
+        enableMute()
     })
 
     element.getButtonSoundOff().addEventListener('click', () => {
-        sound.On()
-        toggleButtonMute()
+        disableMute()
         sound.clickButton()
     })
 
-    function toggleButtonMute() {
-        element.getButtonSoundOn().classList.toggle('hidden')
-        element.getButtonSoundOff().classList.toggle('hidden')
-    }
+    element.getInputTimer()
 
     function disableMute() {
         element.getButtonSoundOn().classList.remove('hidden')
         element.getButtonSoundOff().classList.add('hidden')
-        sound.On()
+        console.log("cheguei até disableMute")
+        sound.isMuted(false)
     }
 
     function enableMute() {
         element.getButtonSoundOn().classList.add('hidden')
         element.getButtonSoundOff().classList.remove('hidden')
-        sound.Off()
+        console.log("cheguei até enableMute")
+        sound.isMuted(true)
     }
 }
