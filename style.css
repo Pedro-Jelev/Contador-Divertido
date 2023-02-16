@@ -24,6 +24,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto';
 }
 
 button {
@@ -39,7 +40,6 @@ body {
     font-size: 1.6rem;
     min-height: 100vh;
     overflow: hidden;
-    position: relative;
     padding-bottom: 6rem;
 
     display: flex;
@@ -97,8 +97,30 @@ body {
 }
 
 menu {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 40%;
+    height: 97%;
+    margin: 12px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(113, 112, 112, 0.595);
+}
+
+menu .svg {
+    align-self: flex-end;
+}
+
+menu .custom-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid yellow;
+    width: 20rem;
+    font-size: 2.4rem;
 }
 
 main {
@@ -108,9 +130,8 @@ main {
 }
 
 main .timer span {
-    font-family: 'Roboto';
     color: var(--timer-color);
-    font-size: 12.6166rem;
+    font-size: 12.6rem;
     line-height: 14.8rem;
 }
 
